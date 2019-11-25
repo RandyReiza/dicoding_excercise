@@ -1,0 +1,20 @@
+<LinearLayout xmlns:adnroid="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    adnroid:layout_width="match_parent"
+    adnroid:layout_height="match_parent"
+    adnroid:orientation="vertical">
+
+    <TextView
+        adnroid:layout_width="match_parent"
+        adnroid:layout_height="wrap_content"
+        adnroid:layout_margin="16dp"
+        adnroid:text="@string/hello_home_fragment" />
+
+    <Button
+        adnroid:layout_width="match_parent"
+        adnroid:layout_height="wrap_content"
+        adnroid:id="@+id/btn_category"
+        adnroid:layout_marginLeft="16dp"
+        adnroid:layout_marginRight="16dp"
+        adnroid:text="@string/to_category" />
+</LinearLayout>
