@@ -84,6 +84,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCalculateSurfaceArea.setVisibility(View.GONE);
         btnSave.setVisibility(View.VISIBLE);
     }
-
-//    Nah, sampai di sini Anda sudah membuat aplikasi Cuboid dengan pattern MVVM. Silakan jalankan aplikasi Anda dan hasilnya akan jadi seperti ini:
 }

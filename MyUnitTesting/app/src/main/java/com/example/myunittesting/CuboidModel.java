@@ -19,7 +19,7 @@ public class CuboidModel {
         return width * length * height;
     }
 
-    public double getSurfaceArea() {
+    public double getSurfaceArea() {    // luas permukaan
         double wl = width * length;
         double wh = width * height;
         double lh = length * height;
@@ -27,7 +27,7 @@ public class CuboidModel {
         return 2 * (wl + wh + lh);
     }
 
-    public double getCircumference() {
+    public double getCircumference() {  // keliling
         return 4 * (width + length + height);
     }
 }
