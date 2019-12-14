@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class Movie implements Parcelable {
     private String title, year, userScore, overview, director, cast;
-    private int photo;
+    private int poster;
 
     protected Movie(Parcel in) {
         title = in.readString();
@@ -14,6 +14,11 @@ public class Movie implements Parcelable {
         overview = in.readString();
         director = in.readString();
         cast = in.readString();
+        poster = in.readInt();
+    }
+
+    public Movie() {
+
     }
 
     @Override
@@ -24,6 +29,7 @@ public class Movie implements Parcelable {
         dest.writeString(overview);
         dest.writeString(director);
         dest.writeString(cast);
+        dest.writeInt(poster);
     }
 
     @Override
@@ -91,11 +97,11 @@ public class Movie implements Parcelable {
         this.cast = cast;
     }
 
-    public int getPhoto() {
-        return photo;
+    public int getPoster() {
+        return poster;
     }
 
-    public void setPhoto(int photo) {
-        this.photo = photo;
+    public void setPoster(int poster) {
+        this.poster = poster;
     }
 }
