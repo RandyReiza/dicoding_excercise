@@ -37,9 +37,14 @@ public class DetailCategoryFragment extends Fragment {
         TextView tvCategoryName = view.findViewById(R.id.tv_category_name);
         TextView tvCategoryDescription = view.findViewById(R.id.tv_category_description);
 
-        assert getArguments() != null;
-        String dataName = getArguments().getString(CategoryFragment.EXTRA_NAME);
-        long dataDescription = getArguments().getLong(CategoryFragment.EXTRA_STOCK);
+        String dataName = DetailCategoryFragmentArgs.fromBundle(getArguments()).getName();
+        Long dataDescription = DetailCategoryFragmentArgs.fromBundle(getArguments()).getStock();
+
+
+//        // menggunakan Bundle
+//        assert getArguments() != null;
+//        String dataName = getArguments().getString(CategoryFragment.EXTRA_NAME);
+//        long dataDescription = getArguments().getLong(CategoryFragment.EXTRA_STOCK);
 
         tvCategoryName.setText(dataName);
         String descriptionText = "Stock : " + dataDescription;

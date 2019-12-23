@@ -42,10 +42,17 @@ public class CategoryFragment extends Fragment {
         btnCategoryLifestyle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle mBundle = new Bundle();
-                mBundle.putString(EXTRA_NAME, "Lifestyle");
-                mBundle.putLong(EXTRA_STOCK, 7);
-                Navigation.findNavController(view).navigate(R.id.action_categoryFragment_to_detailCategoryFragment, mBundle);
+                // menggunakan SafeArgs (bawaan navigation)
+                CategoryFragmentDirections.ActionCategoryFragmentToDetailCategoryFragment toDetailCategoryFragment = CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment();
+                toDetailCategoryFragment.setName("Lifestyle");
+                toDetailCategoryFragment.setStock(7);
+                Navigation.findNavController(view).navigate(toDetailCategoryFragment);
+
+//                // mengunakan Bundle
+//                Bundle mBundle = new Bundle();
+//                mBundle.putString(EXTRA_NAME, "Lifestyle");
+//                mBundle.putLong(EXTRA_STOCK, 7);
+//                Navigation.findNavController(view).navigate(R.id.action_categoryFragment_to_detailCategoryFragment, mBundle);
             }
         });
     }
