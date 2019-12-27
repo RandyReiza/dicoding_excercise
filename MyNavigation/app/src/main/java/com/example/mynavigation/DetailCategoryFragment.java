@@ -50,5 +50,4 @@ public class DetailCategoryFragment extends Fragment {
         String descriptionText = "Stock : " + dataDescription;
         tvCategoryDescription.setText(descriptionText);
     }
-
 }
