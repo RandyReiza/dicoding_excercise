@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionPagerAdapter);
+
+        // supaya bisa swipe kiri kanan
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 

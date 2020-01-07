@@ -21,21 +21,14 @@ public class SectionPagerAdapter extends FragmentPagerAdapter {
     @StringRes
     private final int[] TAB_TITLES = new int[] {
             R.string.tab_text_1,
-            R.string.tab_text_2
+            R.string.tab_text_2,
+            R.string.tab_text_3
     };
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment = null;
-        switch (position) {
-            case 0:
-                fragment = new HomeFragment();
-                break;
-            case 1:
-                fragment= new ProfileFragment();
-                break;
-        }
+        Fragment fragment = HomeFragment.newInstance(position + 1);
         return fragment;
     }
 
@@ -47,6 +40,6 @@ public class SectionPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }
